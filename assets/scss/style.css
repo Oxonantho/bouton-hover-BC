@@ -1,7 +1,75 @@
 body {
-  background: blue;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 350px;
+  height: 80px;
+  position: relative;
+}
+.button .background {
+  position: absolute;
+  background-color: #232633;
+  border-radius: 80px;
+  width: 90px;
+  height: 90px;
+  transition: width 300ms ease-in;
+}
+.button .arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-left: 30px;
+}
+.button .arrow .pointed {
+  height: 20px;
+  width: 20px;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(45deg);
+  transition: transform 300ms ease-in;
+}
+.button .arrow .line {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  right: 1px;
+  background-color: rgba(35, 38, 51, 0);
+  transition: background-color 300ms ease-in;
+}
+.button span {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #232633;
+  padding-left: 40%;
+  z-index: 2;
+  transition: color 300ms ease-in;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover .background {
+  width: 100%;
+}
+.button:hover span {
+  color: white;
+}
+.button:hover .arrow {
+  transform: translate(30px);
+}
+.button:hover .arrow .line {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
